@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import random
 
 app = Flask(__name__)
@@ -20,6 +20,10 @@ def hello():
 def goodbye():
    message = "<h2>This is the second page!</h2>"
    return message
+
+@app.route('/form')
+def form():
+   return render_template("favorite_form.html")
 
 if __name__ == '__main__':
    app.run()
