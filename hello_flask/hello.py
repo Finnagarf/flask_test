@@ -29,6 +29,8 @@ def form():
    def thanks():
       person = "Bob"
       action = "dancing"
+      gift = "cake"
+      
       return render_template("tynote.html", name = person, verb = action)
       
 if __name__ == '__main__':
