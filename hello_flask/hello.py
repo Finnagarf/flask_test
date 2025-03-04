@@ -26,8 +26,10 @@ def form():
    return render_template("favorite_form.html")
 
 @app.route('/thanks')
-def thanks():
-   return render_template("tynote.html", name = "Bob")
-
+   def thanks():
+      person = "Bob"
+      action = "dancing"
+      return render_template("tynote.html", name = person, verb = action)
+      
 if __name__ == '__main__':
    app.run()
