@@ -30,7 +30,8 @@ def form():
       person = "Bob"
       action = "dancing"
       gift = "cake"
-      
+      author = "Levi"
+      Closing_word = "Thanks"
       return render_template("tynote.html", name = person, verb = action)
       
 if __name__ == '__main__':
