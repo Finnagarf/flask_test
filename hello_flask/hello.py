@@ -27,7 +27,7 @@ def form():
 
 @app.route('/thanks')
 def thanks():
-   return render_template("tynote.html")
+   return render_template("tynote.html", name = "Bob")
 
 if __name__ == '__main__':
    app.run()
