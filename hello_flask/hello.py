@@ -25,5 +25,9 @@ def goodbye():
 def form():
    return render_template("favorite_form.html")
 
+@app.route('/thanks')
+def thanks():
+   return render_template("tynote.html")
+
 if __name__ == '__main__':
    app.run()
