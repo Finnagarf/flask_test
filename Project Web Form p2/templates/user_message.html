@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Web Caesar Cipher</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+    </head>
+    <body>
+        <section class="centered">
+            <form action="/user_message" method="POST">
+                <h2>Caesar Cipher</h2>
+                <p>Message to change:</p>
+                <textarea name="message" rows="5" cols="50"></textarea>
+                <br>
+                <label for="quantity">Shift by:</label>
+                <input type="number" name="quantity" min="1" max="25">
+                <label for="quantity">places.</label>
+                <br><br>
+                <input type="radio" name="action" value="Encrypt"> Encrypt <br>
+                <input type="radio" name="action" value="Decrypt"> Decrypt <br><br>
+                <label for="keyword">Keyword:</label>
+                <input type="text" name="keyword" pattern="[A-Za-z]+" title="Only letters allowed">
+                <br><br>
+                <input type="submit" value="Submit">
+                <br><br>
+            </form>
+    
+            <h3>Original Message:</h3>
+            <p>{{ user_text }}</p>
+
+            <h3>Processed Message:</h3>
+            <p>{{ result }}</p>
+            <p style="color:red;">{{ error }}</p>
+        </section>
+    </body>
+</html>
